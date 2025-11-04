@@ -1,0 +1,41 @@
+.consultor-list-container {
+  padding: 1rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.filter-container {
+  margin-bottom: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.table-container {
+  position: relative;
+  min-height: 200px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.consultor-table {
+  width: 100%;
+}
+
+.status-ativo {
+  color: green;
+  font-weight: 500;
+}
+
+.status-inativo {
+  color: red;
+  font-weight: 500;
+}

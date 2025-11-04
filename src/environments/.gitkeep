@@ -1,0 +1,4 @@
+# Esta pasta contém arquivos gerados automaticamente
+# Os arquivos environment.ts e environment.prod.ts são criados pelo script scripts/generate-env.js
+# Eles NÃO devem ser commitados (estão no .gitignore)
+# Copie .env.example para .env e execute: npm run generate-env
