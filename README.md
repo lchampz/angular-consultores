@@ -78,10 +78,86 @@ src/
 - ✅ Layout responsivo com Angular Material
 - ✅ Proteção de rotas com AuthGuard
 
+## Deploy na Vercel
+
+### Pré-requisitos
+
+1. Instale a Vercel CLI:
+
+```bash
+npm install -g vercel
+```
+
+2. Faça login na Vercel:
+
+```bash
+vercel login
+```
+
+### Configuração Inicial (Primeira vez)
+
+1. Configure as variáveis de ambiente na Vercel a partir do seu `.env`:
+
+```bash
+npm run vercel:env:add
+```
+
+Este script irá ler seu arquivo `.env` e configurar todas as variáveis na Vercel.
+
+**Ou configure manualmente no Dashboard:**
+
+- Acesse: https://vercel.com/seu-projeto/settings/environment-variables
+- Adicione as seguintes variáveis:
+  - `FIREBASE_API_KEY`
+  - `FIREBASE_AUTH_DOMAIN`
+  - `FIREBASE_PROJECT_ID`
+  - `FIREBASE_STORAGE_BUCKET`
+  - `FIREBASE_MESSAGING_SENDER_ID`
+  - `FIREBASE_APP_ID`
+  - `FIREBASE_MEASUREMENT_ID` (opcional)
+
+### Deploy
+
+#### Deploy de Produção (Automático)
+
+O script de deploy gera os arquivos de ambiente automaticamente e faz o deploy:
+
+```bash
+npm run deploy
+```
+
+Este comando:
+
+1. ✅ Gera os arquivos de ambiente a partir das variáveis configuradas na Vercel
+2. ✅ Faz o build de produção
+3. ✅ Faz o deploy na Vercel
+
+#### Deploy Preview
+
+Para fazer deploy de preview (sem produção):
+
+```bash
+npm run deploy:preview
+```
+
+### Verificar Variáveis Configuradas
+
+```bash
+npm run vercel:env:ls
+```
+
+### Arquivos de Configuração
+
+- `vercel.json` - Configuração do projeto na Vercel
+- `scripts/deploy-vercel.js` - Script de deploy automatizado
+- `scripts/setup-vercel-env.js` - Script para configurar variáveis de ambiente
+
 ## Tecnologias
 
 - Angular 17
 - Angular Material
 - Firebase Authentication
+- Firebase Firestore
+- Vercel (Deploy)
 - RxJS
 - TypeScript

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "npm run generate-env && npm run build",
+  "outputDirectory": "dist/gerenciamento-consultores/browser",
+  "framework": "angular",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
